@@ -1,0 +1,24 @@
+extends layouts/default
+include helpers/_mixins
+
+block variables
+  - const title = "Sabiel"
+
+block content
+  include ../blocks/modules/loader/loader.pug
+  include ../blocks/modules/header/header.pug
+  main.main
+    include ../blocks/modules/main-top/main-top.pug
+    include ../blocks/modules/garanty/garanty.pug
+    include ../blocks/modules/level/level.pug
+    include ../blocks/modules/decision/decision.pug
+    include ../blocks/modules/form/form.pug
+    include ../blocks/modules/reviews/reviews.pug
+    include ../blocks/modules/comfort/comfort.pug
+    include ../blocks/modules/bottom/bottom.pug
+  include ../blocks/modules/footer/footer.pug
+  include ../blocks/modules/popups/popups.pug
+
+block scripts
+  script(src="js/vendor.js")
+  script(src="js/main.js")

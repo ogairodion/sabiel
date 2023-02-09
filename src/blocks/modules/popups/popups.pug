@@ -1,0 +1,113 @@
+.popup#popup1
+    .popup__top
+        .popup__top-item
+            .popup__top-img
+                img.lazy(src="img/popups/popup-top-1.png", alt="")
+            .popup__top-name MB6
+            .popup__top-title Идеален для небольших комнат
+            .popup__top-price 14 500₽
+            ul.popup__top-list.list--green
+                li.list-item площадь обслуживания 30м&sup2; 
+                li.list-item механизм естественного испарения и очищения воздуха 
+                li.list-item функция охлаждения (10м&sup2;) 
+                li.list-item экономичное энергопотребление (60 Вт) 
+                li.list-item низкий уровень шума (40 Дб) 
+                li.list-item гарантия 12 месяцев
+            .popup__top-button
+                a.btn(href="#popup-form" data-fancybox data-options='{"autofocus" : "false"}')
+                    span Купить
+            .popup__gygrometer
+                .popup__gygrometer-top
+                    .popup__gygrometer-img
+                        img.lazy(src="img/popups/gygrometer.png", alt="")
+                    .popup__gygrometer-info
+                        .popup__gygrometer-title Посмотрите на результат!
+                        .popup__gygrometer-text Дополните увлажнитель надежным точным гигрометром TG150 и контролируйте влажность воздуха в полной мере.
+                        .popup__gygrometer-price 3970 ₽
+                .popup__gygrometer-checkbox
+                    .form__checkbox-container
+                        input.form__checkbox-input(type="checkbox" checked)
+                        span.form__checkbox-btn
+                    .popup__gygrometer-info
+                        .form__checkbox-text Добавить к покупке
+                        a.form__checkbox-link(href="https://sabiel.ru/catalog/aksessuary_dlya_okhladiteley_uvlazhniteley/mekhanicheskiy_termogigrometr_sabiel_tg150/" target="_blank") Подробнее о гигрометре Sabiel TG150
+        .popup__top-item.popup__top-gallery
+            .popup__top-photo
+                img.lazy(src="img/popups/5.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/6.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/7.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/8.jpg", alt="")
+    .popup__bottom.block--blue
+        include ../form/form.pug
+
+.popup#popup2
+    .popup__top
+        .popup__top-item
+            .popup__top-img
+                img.lazy(src="img/popups/popup-top-2.png", alt="")
+            .popup__top-name MB20
+            .popup__top-title Для тех, кто живет с размахом
+            .popup__top-price 30 000₽
+            ul.popup__top-list.list--green
+                li.list-item площадь обслуживания до 200м&sup2;
+                li.list-item механизм естественного испарения и очищения воздуха  
+                li.list-item функция охлаждения (25м&sup2;)
+                li.list-item оптимальное энергопотребление (130 Вт)
+                li.list-item низкий уровень шума (40 Дб)
+                li.list-item гарантия 12 месяцев
+            .popup__top-button
+                a.btn(href="#popup-form" data-fancybox data-options='{"autofocus" : "false"}')
+                    span Купить
+            .popup__gygrometer
+                .popup__gygrometer-top
+                    .popup__gygrometer-img
+                        img.lazy(src="img/popups/gygrometer.png", alt="")
+                    .popup__gygrometer-info
+                        .popup__gygrometer-title Посмотрите на результат!
+                        .popup__gygrometer-text Дополните увлажнитель надежным точным гигрометром TG150 и контролируйте влажность воздуха в полной мере.
+                        .popup__gygrometer-price 3970 ₽
+                .popup__gygrometer-checkbox
+                    .form__checkbox-container
+                        input.form__checkbox-input(type="checkbox" checked)
+                        span.form__checkbox-btn
+                    .popup__gygrometer-info
+                        .form__checkbox-text Добавить к покупке
+                        a.form__checkbox-link(href="https://sabiel.ru/catalog/aksessuary_dlya_okhladiteley_uvlazhniteley/mekhanicheskiy_termogigrometr_sabiel_tg150/" target="_blank") Подробнее о гигрометре Sabiel TG150
+        .popup__top-item.popup__top-gallery
+            .popup__top-photo
+                img.lazy(src="img/popups/1.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/2.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/3.jpg", alt="")
+            .popup__top-photo
+                img.lazy(src="img/popups/4.jpg", alt="")
+    .popup__bottom.block--blue
+        include ../form/form.pug
+
+.popup#popup-form.popup-form
+    form.form(action="./send.php" method="POST")
+            h2.title.title--h2 Чтобы купить увлажнитель, заполните форму
+            .form__inputs
+                input.form__input(type="text" name="name" placeholder="ваше имя" required)
+                input.form__input.phone(type="tel" name="phone" placeholder="ваш телефон")
+                input.form__input(type="email" name="email" placeholder="ваш e-mail" required)
+                input.form__input.hidden.form__input-product(type="text" name="product")
+                input.form__input.hidden.form__input-gygrometer(type="text" name="gygrometer")
+                button.form__submit.btn(type="submit")
+                    span отправить
+            .form__checkbox
+                .form__checkbox-container
+                    input.form__checkbox-input.form__checkbox-privacy(type="checkbox" checked)
+                    span.form__checkbox-btn
+                    .form__checkbox-text Нажимая на кнопку, я даю согласие на обработку персональных данных, получение рассылок, а также соглашаюсь с <a href="https://sabiel.ru/politika/" target="_blank">политикой конфиденциальности</a>.
+                .form__checkbox-container
+                    input.form__checkbox-input(type="checkbox" checked)
+                    span.form__checkbox-btn
+                    .form__checkbox-text Подтверждаю согласие на получение рекламных материалов от Sabiel.
+
+
+

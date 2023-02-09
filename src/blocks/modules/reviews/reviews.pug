@@ -1,0 +1,13 @@
+section#reviews.reviews.block--blue
+    .l-default
+        h2.title.title--h2 Отзывы покупателей
+        .reviews__slider.swiper-container
+            .swiper-wrapper
+                a.reviews__slide.swiper-slide(href="img/reviews/1.jpg" data-fancybox)
+                    img(src="img/reviews/1.jpg", alt="")
+                a.reviews__slide.swiper-slide(href="img/reviews/2.jpg" data-fancybox)
+                    img(src="img/reviews/2.jpg", alt="")
+            .reviews__slider-arrow.reviews__slider-arrow--prev
+                +svgMono("arrow-slider")
+            .reviews__slider-arrow.reviews__slider-arrow--next
+                +svgMono("arrow-slider")

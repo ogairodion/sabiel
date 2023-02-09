@@ -1,0 +1,55 @@
+.comfort {
+    padding: 5% 0;
+    @media screen and (max-width: 1079px) {
+        padding: 125px 0 164px;
+    }
+    @media screen and (max-width: 767px) {
+        padding: 73px 0 91px;
+    }
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @media screen and (max-width: 1079px) {
+            flex-direction: column;
+        }
+    }
+    &__item {
+        width: 48%;
+        @media screen and (max-width: 1079px) {
+            width: 100%;
+        }
+        &:first-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    .title {
+        margin-bottom: 54px;
+        @media screen and (max-width: 1200px) {
+            margin-bottom: 30px;
+            text-align: left;
+        }
+    } 
+    &__list {
+        @media screen and (max-width: 767px) {
+            margin-bottom: 50px;
+        }
+        &-item {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 40px;
+            @media screen and (max-width: 1300px) {
+                font-size: 25px;
+                margin-bottom: 20px;
+            }
+            @media screen and (max-width: 1079px) {
+                font-size: 34px;
+            }
+            @media screen and (max-width: 767px) {
+                font-size: 16px;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

@@ -1,0 +1,17 @@
+header.header
+    .shadow
+    .header__wrapper
+        .header__logo.lazy
+            +svgMono("logo")
+        .header__nav
+            a.header__link.header__nav-item.scroll(href="#garanty") Наши увлажнители
+            a.header__link.header__nav-item.scroll(href="#reviews") Отзывы
+            a.header__link.header__nav-item.scroll(href="https://sabiel.ru/contacts/" target="_blank") Контакты
+            a.header__link.header__phone(href="tel:+74996455246") +7 499 (645-52-46)
+        a.header__mobile.header__mobile-phone(href="tel:+74996455246")
+            img.lazy(src="img/svg/phone.svg", alt="")
+        .header__burger.header__mobile
+            span
+            span
+            span
+        .header__mobile-nav

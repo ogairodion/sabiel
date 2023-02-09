@@ -1,0 +1,338 @@
+body {
+    overflow-x: hidden;
+    font-family: 'Gilroy', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    z-index: z("loader");
+}
+
+.title {
+    &--h1 {
+        font-size: 64px;
+        line-height: 117%;
+        font-weight: 900;
+        @media screen and (max-width: 1700px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 1299px) {
+            font-size: 40px;
+        }
+        @media screen and (max-width: 1199px) {
+            font-size: 35px;
+        }
+        @media screen and (max-width: 1079px) {
+            font-size: 50px;
+            text-align: center;
+        }
+        @media screen and (max-width: 600px) {
+            font-size: 27px;
+        }
+    }
+    &--h2 {
+        font-size: 64px;
+        line-height: 117%;
+        font-weight: 900;
+        @media screen and (max-width: 1440px) {
+            font-size: 50px;
+        }
+        @media screen and (max-width: 1200px) {
+            font-size: 46px;
+        }
+        @media screen and (max-width: 1079px) {
+            font-size: 50px;
+            text-align: center;
+        }
+        @media screen and (max-width: 767px) {
+            font-size: 27px;
+        }
+    }
+    &--thanks {
+        font-size: 27px !important;
+        margin-bottom: 0 !important;
+        margin-top: 0 !important;
+    }
+}
+
+.block {
+    &--blue {
+        background: #EFF5FA;
+    }
+}
+
+.l {
+    &-default{
+        position: relative;
+        z-index: z("l-default");
+        width: 100%;
+        margin: 0 auto;
+        padding: 0 10%;
+        box-sizing: border-box;
+        @media screen and (max-width: 1079px){ 
+            padding: 0 30px;
+            max-width: 632px;
+        }   
+    }
+}
+
+.btn {
+    @include tr("all");
+    width: 100%;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    border: 3px solid #000000;
+    box-sizing: border-box;
+    border-radius: 40px;
+    padding: 0 20px;
+    span {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 31px;
+        line-height: 117%;
+        font-weight: 900;
+        &:before {
+            content: '';
+            width: 28px;
+            height: 28px;
+            border-radius: 100%;
+            background: #1162FF;
+            margin-right: 30px;
+            @media screen and (max-width: 1199px) {
+                width: 17px;
+                height: 17px;
+                margin-right: 14px;
+            }
+        }
+    }
+    &--thanks {
+        margin: 0 auto !important;
+    }
+}
+
+.shadow {
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: z("shadow");
+    width: 100%;
+    height: 100vh;
+    opacity: .5;
+}
+
+.lazy {
+    opacity: 0;
+}
+
+.loading,
+.loaded,
+[data-was-processed="true"],
+[data-ll-status="entered"] {
+    @include tr(all);
+    opacity: 1;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.show,
+.show_btn {
+    display: flex !important;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+textarea,
+a,
+button,
+input[type="submit"] {
+    @include tr(all);
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+    &:disabled {
+        opacity: .3;
+        cursor: not-allowed;
+        &:hover {
+            opacity: .3; 
+        }
+    }
+}
+
+a,
+button,
+input[type="submit"] {
+    cursor: pointer;
+    &:hover {
+        opacity: .5;
+    }
+    &:active {
+        opacity: .7;
+    }
+}
+
+.block--effect {
+    &-left-h {
+        opacity: 0;
+        &[data-effect="active"] {
+            opacity: 1;
+            animation: effectLeft .4s ease-in-out;
+            transition: opacity .4s ease-in-out;
+        }
+    }
+    &-left-t {
+        opacity: 0;
+        &[data-effect="active"] {
+            opacity: 1;
+            animation: effectLeft .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+        }
+    }
+}
+
+input[type="submit"]:disabled {
+    opacity: .5;
+    cursor: not-allowed;
+}
+
+img {
+    // width: 100%;
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+.list {
+    padding: 0;
+    @media screen and (max-width: 1079px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    &-item {
+        position: relative;
+        display: flex;
+        align-items: center;
+        &:before {
+            content: '';
+            width: 4px;
+            height: 4px;
+            border-radius: 100%;
+            background: #000;
+            margin-right: 18px;
+            @media screen and (max-width: 1199px) {
+                width: 2px;
+                height: 2px;
+                margin-right: 11px;
+            }
+            @media screen and (max-width: 1079px) {
+                display: none;
+            }
+        }
+    }
+    &--green {
+        padding: 0;
+        .list-item {
+            position: relative;
+            display: flex;
+            align-items: center;
+            &:before {
+                content: '';
+                min-width: 12px;
+                min-height: 12px;
+                border-radius: 100%;
+                background: #27C44A;
+                margin-right: 24px;
+                @media screen and (max-width: 1079px) {
+                    display: flex;
+                }
+                @media screen and (max-width: 767px) {
+                    min-width: 6px;
+                    min-height: 6px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+
+input,
+video {
+    outline: none;
+    border: none;
+}
+
+section {
+    overflow: hidden;
+}
+
+.fancybox-content{
+    padding: 0;
+}
+
+
+.form{
+    &__input{
+        background: #FFFFFF;
+        border: 1px solid #E6E6E6;
+        font-size: 16px;
+        line-height: 40px;
+        display: flex;
+        align-items: center;
+        text-indent: 20px;
+        color: rgba(0,0,0,.6);
+        padding: 0 16px;
+        &::placeholder{
+            color: rgba(0, 0, 0, .6);
+            transition: opacity .4s ease;
+        }
+        &:focus{
+            &::placeholder{
+                opacity: 0;
+            }
+        }
+    }
+}
+
+.fancybox-close-small {
+    width: 70px;
+    height: 70px;
+}
+
+@keyframes effectLeft {
+    0% {
+        transform: translate(200px,0);
+    }
+    100% {
+        transform: translate(0,0);
+    }
+}
